@@ -3,3 +3,7 @@ Sonarqube token:
 
 // Jenkins URL
 // http://ec2-13-41-240-208.eu-west-2.compute.amazonaws.com:8080/
+
+Github token
+jenkins access
+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
