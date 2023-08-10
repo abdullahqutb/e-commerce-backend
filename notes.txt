@@ -1,0 +1,5 @@
+Sonarqube token:
+10ce8eeaa0eef22ff50c3ecadb3a8fb959cf8c7f
+
+// Jenkins URL
+// http://ec2-13-41-240-208.eu-west-2.compute.amazonaws.com:8080/
