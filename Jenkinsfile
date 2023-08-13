@@ -30,8 +30,7 @@ pipeline {
                 script {
                     sh '''
                         sonar-scanner \
-                        -Dsonar.projectKey=ecommerce \
-                        -Dsonar.sources=. \
+                        -Dsonar.projectBaseDir=./ \
                         -Dsonar.host.url=http://ec2-18-133-28-219.eu-west-2.compute.amazonaws.com:9000 \
                         -Dsonar.login=f25cb86769f5efd68453ef989f259e9684280321
                     '''
