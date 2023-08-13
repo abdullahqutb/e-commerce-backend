@@ -1,7 +1,4 @@
 Sonarqube token:
-10ce8eeaa0eef22ff50c3ecadb3a8fb959cf8c7f
-New token:
-48916dbcaaeda24e673087109127a172b272f884
 
 // Jenkins URL
 // http://ec2-13-41-240-208.eu-west-2.compute.amazonaws.com:8080/
@@ -13,4 +10,4 @@ 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
 sonar-scanner \
   -Dsonar.projectBaseDir=./ \
   -Dsonar.host.url=http://ec2-18-133-28-219.eu-west-2.compute.amazonaws.com:9000 \
-  -Dsonar.login=48916dbcaaeda24e673087109127a172b272f884
+  -Dsonar.login=f25cb86769f5efd68453ef989f259e9684280321
