@@ -1,5 +1,4 @@
 const mysql = require('mysql');
-// const expressSession = require('express-session');
 
 const db = mysql.createConnection({
   host: 'ecommerce-db.cfcvwjxnwqwd.eu-west-2.rds.amazonaws.com',
@@ -17,10 +16,3 @@ db.connect((err) => {
 });
 
 module.exports = db;
-
-// Use session for tracking logins
-// app.use(expressSession({
-//   secret: 'your_secret_key',
-//   resave: true,
-//   saveUninitialized: false
-// }));

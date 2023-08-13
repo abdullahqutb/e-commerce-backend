@@ -7,16 +7,19 @@ const db = require('./db');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+const { isValidInput } = require('./utils/validate');
 
 app.get('/', (req, res) => {
-  res.send('Hello, e-commerce world test 2!');
+  res.send('Hello, e-commerce world test');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 
-// Path: routes.js
+// Paths:
 app.post('/register', (req, res) => {
   const { username, password } = req.body;
 
@@ -26,13 +29,17 @@ app.post('/register', (req, res) => {
       console.error('Error inserting data:', error);
       res.status(500).send('Server Error');
     } else {
-      res.send('Registration successful!');
+      res.json({ message: 'Registration successful!' });
     }
   });
 });
 
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
+
+  if (!isValidInput(username) || !isValidInput(password)) {
+    return res.status(400).send('Invalid input');
+  }
 
   const query = 'SELECT * FROM users WHERE username = ? AND password = ?';
   db.query(query, [username, password], (error, results) => {
@@ -60,3 +67,12 @@ app.get('/products', (req, res) => {
     }
   });
 });
+
+let server;
+if (process.env.NODE_ENV !== 'test') {
+  server = app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+module.exports = { app, server };
