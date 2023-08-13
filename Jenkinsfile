@@ -19,12 +19,6 @@ pipeline {
             }
         }
 
-        stage('Install Sonar Scanner') {
-            steps {
-                sh 'npm install -g sonar-scanner'
-            }
-        }
-
         stage('Run Tests') {
             steps {
                 sh 'npm test'
