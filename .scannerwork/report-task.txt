@@ -2,5 +2,5 @@ projectKey=ecommerce
 serverUrl=http://ec2-18-133-28-219.eu-west-2.compute.amazonaws.com:9000
 serverVersion=8.9.2.46101
 dashboardUrl=http://ec2-18-133-28-219.eu-west-2.compute.amazonaws.com:9000/dashboard?id=ecommerce
-ceTaskId=AYntDQD_hxTAAin8l95a
-ceTaskUrl=http://ec2-18-133-28-219.eu-west-2.compute.amazonaws.com:9000/api/ce/task?id=AYntDQD_hxTAAin8l95a
+ceTaskId=AYntWuNDHLgWe-YxzGiA
+ceTaskUrl=http://ec2-18-133-28-219.eu-west-2.compute.amazonaws.com:9000/api/ce/task?id=AYntWuNDHLgWe-YxzGiA
